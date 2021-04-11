@@ -1,0 +1,1 @@
+# nomod-bedwars
