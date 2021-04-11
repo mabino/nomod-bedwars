@@ -1,6 +1,6 @@
 # No Mod Bedwars
 
-Play Bedwars on your own Vanilla Minecraft Server (Java) without having to download separate mods, maps, or alternate Minecraft distributions (Spigot, etc).
+Play Bedwars on your own Vanilla Minecraft Server (Java) without having to download separate mods, maps, or alternate Minecraft distributions.
 
 ## Prerequisites
 
