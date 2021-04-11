@@ -1,0 +1,31 @@
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove red
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove blue
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove green
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove yellow
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove gray
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove white
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove aqua
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove pink
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove chainboots
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove chainlegs
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove ironboots
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove ironlegs
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove diaboots
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tag @s remove dialegs
+execute as @a[scores={joinG=100..}] at @s unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run clear @s
+execute as @a[scores={joinG=100..}] at @s unless entity @a[scores={joinG=0}] unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run scoreboard players reset @e
+
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=redB,scores={broke=1..}] run tag @s remove red
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=blueB,scores={broke=1..}] run tag @s remove blue
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=greenB,scores={broke=1..}] run tag @s remove green
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=yellowB,scores={broke=1..}] run tag @s remove yellow
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=grayB,scores={broke=1..}] run tag @s remove gray
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=whiteB,scores={broke=1..}] run tag @s remove white
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=aquaB,scores={broke=1..}] run tag @s remove aqua
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if entity @e[type=armor_stand,tag=pinkB,scores={broke=1..}] run tag @s remove pink
+
+execute unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] if score #count forge matches 4.. if score #count1 forge matches 4.. if score #count2 forge matches 8.. if score #count3 forge matches 8.. if score #count4 forge matches 8.. if score #count5 forge matches 8.. if score #count6 forge matches 8.. if score #count7 forge matches 1.. run tellraw @a[scores={joinG=100}] [{"text":"Click \"","color":"white","bold":"true"},{"text":"[YES]","color":"green","bold":"true","clickEvent":{"action":"run_command","value":"/scoreboard players add @e[type=armor_stand,tag=timer] clicktimer 1"}},{"text":"\" when you are ready to start the game","color":"white","bold":"true"}]
+execute as @a[scores={joinG=100..}] at @s if entity @e[type=armor_stand,tag=timer,scores={clicktimer=1..}] unless entity @e[type=armor_stand,tag=timer,scores={gametimer=100..}] run tellraw @s ["",{"text":"-+=","obfuscated":true},{"text":"Please choose a Team","bold":true},{"text":"=+-","obfuscated":true},{"text":"\n\n"},{"text":"     ","color":"red"},{"text":"[RED]","color":"red","clickEvent":{"action":"run_command","value":"/trigger trigger add 1"}},{"text":"               ","color":"red"},{"text":"[BLUE]","color":"dark_blue","clickEvent":{"action":"run_command","value":"/trigger trigger add 2"}},{"text":"\n\n"},{"text":"     ","color":"green"},{"text":"[GREEN]","color":"green","clickEvent":{"action":"run_command","value":"/trigger trigger add 3"}},{"text":"          ","color":"green"},{"text":"[YELLOW]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger trigger add 4"}},{"text":"\n\n"},{"text":"     ","color":"aqua"},{"text":"[AQUA]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger trigger add 5"}},{"text":"             ","color":"aqua"},{"text":"[WHITE]","clickEvent":{"action":"run_command","value":"/trigger trigger add 6"}},{"text":"\n\n"},{"text":"     ","color":"light_purple"},{"text":"[PINK]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger trigger add 7"}},{"text":"              ","color":"light_purple"},{"text":"[GRAY]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger trigger add 8"}},{"text":"\n\n            "},{"text":"[SPECTATOR]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger trigger add 9"}}]
+
+scoreboard players reset @a[scores={joinG=100}] leave
+scoreboard players reset @a[scores={joinG=100}] joinG
