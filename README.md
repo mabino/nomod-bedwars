@@ -12,5 +12,5 @@ Play Bedwars on your own Vanilla Minecraft Server (Java) without having to downl
 1. Extract the Fully Working Vanilla Bed Wars map.
 2. Copy or move the contents into the world folder found within your Vanilla Minecraft Server instance, overwriting any existing world data stored there.  Note that you'll need to back up or save any existing world data should you want to retain and restore it.
 3. Start the server and have players join.
-4. Teleport to a platform located at approximately `0, 133, 2` and `/setworldspawn` to make sure that players spawn in the correct location.
+4. Teleport to a platform located at approximately `0, 133, 0` and `/setworldspawn` to make sure that players spawn in the correct location.
 5. Find a sign on the platform that says "Right click to \[Start Game\]", right-click on it, and type `/` to pick your team.
